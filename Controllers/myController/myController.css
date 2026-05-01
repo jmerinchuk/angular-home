@@ -1,0 +1,33 @@
+.my-controller h1 {
+  color: #007bff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.my-controller p {
+  margin: 10px 0;
+}
+
+.my-controller input[type="text"],
+.my-controller input[type="email"] {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.my-controller input[type="text"]:focus,
+.my-controller input[type="email"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.my-controller span {
+  color: red;
+  font-size: 14px;
+}
+
+.my-controller .ng-invalid {
+  border-color: red;
+}

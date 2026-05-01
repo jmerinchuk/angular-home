@@ -1,0 +1,47 @@
+<!-- MyController -->
+<div ng-controller="myController" class="my-controller" ng-init="myCol='lightblue'; quantity=1; cost=5; points=[1,15,19,2,40];">
+
+    <h1>My Controller Data</h1>
+
+    <p ng-cloak data-ng-show="showHiddenMessage">{{ hiddenMessage }}</p>
+
+    <p>Rootscope's favourite color is: {{ favColor }}</p>
+
+    <!-- Input and display -->
+    <p>Name: 
+        <input type="text" ng-model="name" placeholder="Enter your name">
+    </p>
+    <h2>Hello, {{name}}!</h2>
+
+    <!-- Expressions -->
+    <div>
+        <p>Expressions: {{ 5 + 5 }}</p>
+    </div>
+
+    <div>
+        <p>Total in dollar: <span ng-bind="quantity * cost | currency"></span></p>
+    </div>
+
+    <!-- Arrays -->
+    <div>
+        <p>The third result is {{ points[2] }}</p>
+    </div>
+
+    <!-- Expressions to change color -->
+    <div>
+        <input ng-style="{ 'background-color': myCol }" ng-model="myCol">
+    </div>
+
+    <!-- Test Directive -->
+    <div>
+        <p w3-test-directive1></p>
+        <w3-test-directive2></w3-test-directive2>
+    </div>
+
+    <!-- Form show and hide -->
+    <form name="myForm">
+        Email:
+        <input type="email" name="myAddress" ng-model="text">
+        <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+    </form>
+</div>

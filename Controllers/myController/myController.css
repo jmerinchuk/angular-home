@@ -1,31 +1,41 @@
 .my-controller h1 {
-  color: #007bff;
-  font-size: 24px;
-  margin-bottom: 20px;
+  color: #2563eb;
+  margin-bottom: 1.5rem;
 }
 
 .my-controller p {
-  margin: 10px 0;
+  margin-bottom: 0.75rem;
 }
 
 .my-controller input[type="text"],
 .my-controller input[type="email"] {
-  border: 1px solid #ccc;
-  padding: 8px;
-  border-radius: 4px;
-  width: 200px;
-  margin-bottom: 10px;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 0.75rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .my-controller input[type="text"]:focus,
 .my-controller input[type="email"]:focus {
-  border-color: #007bff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
   outline: none;
 }
 
+.my-controller .ng-invalid {
+  border-color: #dc2626;
+}
+
+.my-controller .ng-invalid:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
 .my-controller span {
-  color: red;
-  font-size: 14px;
+  color: #dc2626;
+  font-size: 0.875rem;
 }
 
 .my-controller .ng-invalid {

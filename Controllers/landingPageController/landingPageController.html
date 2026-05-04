@@ -1,0 +1,13 @@
+<main class="landing-page" ng-show="showLanding" role="main">
+    <div class="landing-content">
+        <h1 id="landing-title">{{ welcomeTitle }}</h1>
+        <p id="landing-description">{{ welcomeMessage }}</p>
+        <button
+            class="landing-action"
+            ng-click="enterApp()"
+            aria-describedby="landing-description"
+            aria-label="Enter the Angular application to explore controllers and features">
+            Enter App
+        </button>
+    </div>
+</main>

@@ -1,0 +1,22 @@
+<div ng-controller="namesController" class="names-controller" ng-init="">
+        <h1>Names Controller Data</h1>
+        <table border="1" width="100%">
+            <tr>
+                <th ng-click="orderByMe('name')">Name</th>
+                <th ng-click="orderByMe('country')">Country</th>
+            </tr>
+            <tr ng-repeat="x in names | orderBy:myOrderBy">
+                <td>{{x.name}}</td>
+                <td>{{x.country}}</td>
+            </tr>
+        </table>
+        <p><input type="text" ng-model="test" placeholder="Search"></p>
+        <p>A filter orders these by country</p>
+        <ul>
+            <li ng-repeat="x in names | orderBy:'country' | filter : test">
+                {{ x.name + ', ' + x.country }}
+            </li>
+        </ul>
+        <p>namesController's favourite color is: {{ favColor }}</p>
+        <p>If the variable is the same name as rootscope, code pulls from the controller first!</p>
+    </div>

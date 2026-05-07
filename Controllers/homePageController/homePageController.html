@@ -21,36 +21,10 @@
     </button>
     
     <div ng-show="currentPage === 'myController'" ng-include="'../Controllers/myController/myController.html'"></div>
+
+    <div ng-show="currentPage === 'namesController'" ng-include="'../Controllers/namesController/namesController.html'"></div>
+
+    <div ng-show="currentPage === 'personController'" ng-include="'../Controllers/personController/personController.html'"></div>
     
-    <div ng-show="currentPage === 'namesController'" ng-controller="namesController">
-        <h1>Names Controller Data</h1>
-        <table border="1" width="100%">
-            <tr>
-                <th ng-click="orderByMe('name')">Name</th>
-                <th ng-click="orderByMe('country')">Country</th>
-            </tr>
-            <tr ng-repeat="x in names | orderBy:myOrderBy">
-                <td>{{x.name}}</td>
-                <td>{{x.country}}</td>
-            </tr>
-        </table>
-        <p><input type="text" ng-model="test" placeholder="Search"></p>
-        <p>A filter orders these by country</p>
-        <ul>
-            <li ng-repeat="x in names | orderBy:'country' | filter : test">
-                {{ x.name + ', ' + x.country }}
-            </li>
-        </ul>
-        <p>namesController's favourite color is: {{ favColor }}</p>
-        <p>If the variable is the same name as rootscope, code pulls from the controller first!</p>
-    </div>
     
-    <div ng-show="currentPage === 'personController'" ng-controller="personController" class="person-controller">
-        <h1>Person Controller Data</h1>
-        <p>First Name: <input type="text" ng-model="firstName"></p>
-        <p>Last Name: <input type="text" ng-model="lastName"></p>
-        <p>Full Name: {{firstName + " " + lastName}}</p>
-        <p>Full Name2: {{fullName()}}</p>
-        <p>Last Name with Filter: {{lastName | uppercase }}</p>
-    </div>
 </div>

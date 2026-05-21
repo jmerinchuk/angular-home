@@ -11,6 +11,9 @@
             <button class="nav-button" ng-click="goToPage('personController')" aria-label="Go to Person Controller page">
                 Person Controller
             </button>
+            <button class="nav-button" ng-click="goToPage('exFetchController')" aria-label="Go to Example Fetch Controller page">
+                Example Fetch Controller
+            </button>
         </div>
     </div>
 </div>
@@ -25,6 +28,7 @@
     <div ng-show="currentPage === 'namesController'" ng-include="'../Controllers/namesController/namesController.html'"></div>
 
     <div ng-show="currentPage === 'personController'" ng-include="'../Controllers/personController/personController.html'"></div>
-    
+
+    <div ng-show="currentPage === 'exFetchController'" ng-include="'../Controllers/exFetchController/exFetchController.html'"></div>
     
 </div>

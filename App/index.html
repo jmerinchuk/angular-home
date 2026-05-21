@@ -2,18 +2,27 @@
 <html lang="en">
     <head>
         <title>Basic AngularJS App</title>
+        <!-- Styles -->
         <link rel="stylesheet" href="base.css">
-        <link rel="stylesheet" href="../Controllers/myController/myController.css">
-        <link rel="stylesheet" href="../Controllers/landingPageController/landingPageController.css">
-        <link rel="stylesheet" href="../Controllers/homePageController/homePageController.css">
+        <link rel="stylesheet" href="Controllers/landingPageController/landingPageController.css">
+        <link rel="stylesheet" href="Controllers/homePageController/homePageController.css">
+        <link rel="stylesheet" href="Controllers/namesController/namesController.css">
+        <link rel="stylesheet" href="Controllers/personController/personController.css">
+        <link rel="stylesheet" href="Controllers/myController/myController.css">
+        <link rel="stylesheet" href="Controllers/exFetchController/exFetchController.css">
+
+        <!-- Framework and App -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         <script src="myApp.js"></script>
+
         <!-- Controllers -->
-        <script src="../Controllers/landingPageController/landingPageController.js"></script>
-        <script src="../Controllers/homePageController/homePageController.js"></script>
-        <script src="../Controllers/myController/myController.js"></script>
-        <script src="../Controllers/namesController/namesController.js"></script>
-        <script src="../Controllers/personController/personController.js"></script>
+        <script src="Controllers/landingPageController/landingPageController.js"></script>
+        <script src="Controllers/homePageController/homePageController.js"></script>
+        <script src="Controllers/myController/myController.js"></script>
+        <script src="Controllers/namesController/namesController.js"></script>
+        <script src="Controllers/personController/personController.js"></script>
+        <script src="Controllers/exFetchController/exFetchController.js"></script>
+        
         <!-- Services -->
         <script src="../Services/myHttpService.js"></script>
     </head>
@@ -23,10 +32,10 @@
         <!-- Initialize the AngularJS application -->
         <div ng-app="myApp">
             <div ng-controller="landingPageController">
-                <div ng-include="'../Controllers/landingPageController/landingPageController.html'"></div>
+                <div ng-show="showLanding" ng-include="'Controllers/landingPageController/landingPageController.html'"></div>
 
                 <div ng-show="!showLanding" ng-controller="homePageController">
-                    <div ng-include="'../Controllers/homePageController/homePageController.html'"></div>
+                    <div ng-include="'Controllers/homePageController/homePageController.html'"></div>
                 </div>
             </div>
         </div>

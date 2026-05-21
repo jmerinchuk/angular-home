@@ -1,0 +1,19 @@
+<section ng-controller="exFetchController" class="ex-fetch-controller">
+    <h1>exFetchController</h1>
+
+    <p>This controller uses basic javascript to fetch the ToDo items</p>
+    
+    <p>Total ToDos: {{todoCount}}</p>
+
+    <button class="nav-button" ng-click="fetchTodos()" ng-show="showGetTodosButton">Fetch ToDos</button>
+
+    <div>
+        <h2>ToDo List</h2>
+        <ul>
+            <li ng-repeat="todo in todoList">
+                {{todo.id}} : {{todo.todo}}
+            </li>
+        </ul>
+    </div>
+
+</section>
